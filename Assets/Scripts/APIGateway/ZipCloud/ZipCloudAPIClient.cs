@@ -12,7 +12,7 @@ namespace APIGateway.ZipCode {
         private const string BaseUrl = "https://zipcloud.ibsnet.co.jp/api/search?zipcode=";
 
         /// <summary>
-        /// —X•Ö”Ô†‚©‚çZŠ‚ğŒŸõ‚·‚éD
+        /// éƒµä¾¿ç•ªå·ã‹ã‚‰ä½æ‰€ã‚’æ¤œç´¢ã™ã‚‹ï¼
         /// </summary>
         public static async UniTask<ZipCloudResponse> GetAddressFromZipAsync(string zipcode) {
             

@@ -14,16 +14,16 @@ namespace Composition {
 
 
         private async void Start() {
-            string testZipcode = "1000001"; // “Œ‹“sç‘ã“c‹æç‘ã“c
+            string testZipcode = "1000001"; // æ±äº¬éƒ½åƒä»£ç”°åŒºåƒä»£ç”°
 
             ZipCloudResponse response = await ZipCloudAPIClient.GetAddressFromZipAsync(testZipcode);
 
             if (response != null && response.results != null && response.results.Length > 0) {
                 var result = response.results[0];
-                Debug.Log($"—X•Ö”Ô†: {result.zipcode}");
-                Debug.Log($"ZŠ: {result.address1} {result.address2} {result.address3}");
+                Debug.Log($"éƒµä¾¿ç•ªå·: {result.zipcode}");
+                Debug.Log($"ä½æ‰€: {result.address1} {result.address2} {result.address3}");
             } else {
-                Debug.LogError("ZŠî•ñ‚Ìæ“¾‚É¸”s‚µ‚Ü‚µ‚½B");
+                Debug.LogError("ä½æ‰€æƒ…å ±ã®å–å¾—ã«å¤±æ•—ã—ã¾ã—ãŸã€‚");
             }
         }
 
@@ -31,8 +31,8 @@ namespace Composition {
         //private async void Start() {
         //    var client = new GitHubAPIClient();
 
-        //    string owner = "torvalds";  // —á: Linus Torvalds
-        //    string repo = "linux";      // —á: LinuxƒJ[ƒlƒ‹
+        //    string owner = "torvalds";  // ä¾‹: Linus Torvalds
+        //    string repo = "linux";      // ä¾‹: Linuxã‚«ãƒ¼ãƒãƒ«
 
         //    var repository = await client.GetRepositoryInfoAsync(owner, repo);
 
@@ -53,7 +53,7 @@ namespace Composition {
 
         //async void Start() {
 
-        //    var key = "—I–Ø•É";
+        //    var key = "æ‚ æœ¨ç¢§";
         //    var request = UnityWebRequest.Get($"{BaseUrl}/page/summary/{key}");
 
         //    await request.SendWebRequest();
