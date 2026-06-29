@@ -6,22 +6,22 @@ namespace APIGateway.ZipCode {
     public record ZipCloudResult {
 
         /// <summary>
-        /// —X•Ö”Ô†D
+        /// éƒµä¾¿ç•ªå·ï¼
         /// </summary>
         public string zipcode;
 
         /// <summary>
-        /// “s“¹•{Œ§D
+        /// éƒ½é“åºœçœŒï¼
         /// </summary>
         public string address1;
 
         /// <summary>
-        /// s‹æ’¬‘ºD
+        /// å¸‚åŒºç”ºæ‘ï¼
         /// </summary>
         public string address2;
 
         /// <summary>
-        /// ’¬ˆæD
+        /// ç”ºåŸŸï¼
         /// </summary>
         public string address3;
 

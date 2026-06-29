@@ -16,7 +16,7 @@ namespace APIGateway.GitHub {
 
             using (var request = UnityWebRequest.Get(url)) {
 
-                // GitHub APIのUser-Agent要件を満たすためのヘッダー追加
+                // GitHub API縺ｮUser-Agent隕∽ｻｶ繧呈ｺ縺溘☆縺溘ａ縺ｮ繝倥ャ繝繝ｼ霑ｽ蜉
                 request.SetRequestHeader("User-Agent", "Unity-GitHub-Client");
 
                 // 

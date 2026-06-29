@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 // [REF]
-// ウィキメディア REST API https://www.mediawiki.org/wiki/Wikimedia_REST_API/ja
-// APIサンドボックス https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:ApiSandbox
+// 繧ｦ繧｣繧ｭ繝｡繝�繧｣繧｢ REST API https://www.mediawiki.org/wiki/Wikimedia_REST_API/ja
+// API繧ｵ繝ｳ繝峨�懊ャ繧ｯ繧ｹ https://ja.wikipedia.org/wiki/%E7%89%B9%E5%88%A5:ApiSandbox
 
-namespace APIGateway.Wikipedis {
+namespace APIGateway.Wikipedia {
 
     public sealed class WikiAPIService {
 

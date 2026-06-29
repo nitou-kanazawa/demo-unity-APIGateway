@@ -1,6 +1,6 @@
 using System;
 
-namespace APIGateway.Wikipedis {
+namespace APIGateway.Wikipedia {
     
     public class Wiki {
     

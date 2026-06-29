@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 // [REF]
-//  zenn: UnityWebRequest‚ÅOpenAI‚ÌChatCompletionsAPI‚ÉPOST‚·‚é https://zenn.dev/wappaboy/scraps/202860fb1bb5eb
+//  zenn: UnityWebRequestã§OpenAIã®ChatCompletionsAPIã«POSTã™ã‚‹ https://zenn.dev/wappaboy/scraps/202860fb1bb5eb
 
 namespace APIGateway.OpenAI {
 
@@ -43,17 +43,17 @@ namespace APIGateway.OpenAI {
 				await www.SendWebRequest().ToUniTask();
 				var response = www.downloadHandler.text;
 				Debug.Log(response);
-				//JSONŒ`®‚Ìresponse‚ğBodyƒNƒ‰ƒX‚É•ÏŠ·
+				//JSONå½¢å¼ã®responseã‚’Bodyã‚¯ãƒ©ã‚¹ã«å¤‰æ›
 				var responseJson = JsonUtility.FromJson<ChatResponse>(response);
-				//BodyƒNƒ‰ƒX‚Ì’†‚Ìmessages‚Ì’†‚Ìcontent‚ğæ“¾
+				//Bodyã‚¯ãƒ©ã‚¹ã®ä¸­ã®messagesã®ä¸­ã®contentã‚’å–å¾—
 				var output = responseJson.choices[0].message.content;
 				return output;
 			} catch (Exception e) {
-				//ƒGƒ‰[‚ªo‚½‚çAtryCount‰ñ¸”s‚·‚é‚Ü‚Å‚à‚¤ˆê“xÀs
-				Debug.LogError($"y{tryCount}‰ñ–ÚzChatGPT‚ÌƒGƒ‰[:{e}");
+				//ã‚¨ãƒ©ãƒ¼ãŒå‡ºãŸã‚‰ã€tryCountå›å¤±æ•—ã™ã‚‹ã¾ã§ã‚‚ã†ä¸€åº¦å®Ÿè¡Œ
+				Debug.LogError($"ã€{tryCount}å›ç›®ã€‘ChatGPTã®ã‚¨ãƒ©ãƒ¼:{e}");
 				var newCount = tryCount + 1;
 				if (newCount > 10) {
-					throw new Exception("ChatGPT‚ÌƒGƒ‰[‚ª10‰ñ‘±‚¢‚½‚½‚ßAˆ—‚ğ’†’f‚µ‚Ü‚µ‚½.");
+					throw new Exception("ChatGPTã®ã‚¨ãƒ©ãƒ¼ãŒ10å›ç¶šã„ãŸãŸã‚ã€å‡¦ç†ã‚’ä¸­æ–­ã—ã¾ã—ãŸ.");
 				}
 				return await GetGPTResponse(message, newCount);
 			}
